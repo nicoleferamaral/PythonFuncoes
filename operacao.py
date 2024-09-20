@@ -195,6 +195,150 @@ class Operacao: #Nome de classe sempre em letra maiúcula
         else:
             return "Não é perfeito"
 
+    def troca(self):
+       A=10
+       B=20
+       (A,B)=(B,A)
+       return (A,B)
+
+    def antecessor(self,num):
+        return (num-1)
+
+    def areaRe(self,b,h):
+        return (b*h)
+
+    def anosDia(self,anoAtual,ano,mes,dia):
+        return (dia+(mes*30)+((anoAtual-ano)*365))
+
+    def votos(self,total, brancos,nulos,validos):
+        if (brancos+nulos+validos)== total:
+            return f'Total: {total}'+ f'\n Percentual de brancos: {(brancos/total)*100}%'+f'\n Percentual de nulos: {(nulos/total)*100}%'+f'\n Percentual de validos: {(validos/total)*100}%'
+        else:
+            return "Valores inválidos!"
+
+    def salario(self,sal,rea):
+        return (sal+(sal*(rea/100)))
+
+    def carro(self,valor):
+        return (valor+(valor*0.28)+(valor*0.45))
+
+    def media(self,a,b,c):
+        return ((a+b+c)/3)
+
+    def maca(self,total):
+        if total>0:
+            if total < 12:
+                return (total*1.30)
+            else:
+                return (total*1)
+
+        else:
+            return "Valor inválido"
+
+    def crescente(self,vetor):
+        return sorted(vetor)
+
+
+    def vendas(self,fixo, valor):
+        if valor < 1500:
+            return (fixo+(0.03*valor))
+        else:
+            return  (fixo+(0.05*valor))
+
+    def saldo(self, saldo, debito, credito):
+        atual = (saldo - (debito+credito))
+        if atual >= 0:
+           return  f'Saldo Positivo de R${atual}'
+        else:
+            return f'Saldo Negativo de R${atual}'
+
+    def tabua(self, num1):
+        resultado = ""
+        if num1>1 and num1<=10:
+            for i in range(0, 11, 1):
+                resultado += f' \n{num1} * {i} = {num1 * i}'
+            return resultado
+        else:
+            return "Número digitado inválido"
+
+    def imprima(self, num1):
+        resultado = ""
+        if num1 > 0:
+            for i in range(0, num1, 1):
+                resultado += f' \n {i + 1}'
+            return resultado
+        else:
+            return "Número inválido"
+
+    def negativos(self,vetor):
+        resultado = 0
+        for i in range(len(vetor)):
+            if vetor[i]<0:
+                resultado +=1
+        return resultado
+
+    def somaQuarenta(self, vetor):
+        resultado = 0
+        for i in range(len(vetor)):
+            if vetor[i] < 40:
+                resultado += vetor[i]
+        return resultado
+
+    def mediaArit(self):
+        resultado = 0
+        for i in range (16,100,1):
+            resultado += i
+        return (resultado/84)
+
+    def quantidade(self,vetor):
+        resultado = 0
+
+        for i in range(len(vetor)):
+            resultado += vetor[i]
+
+        return f' \n O maior número é {max(vetor)} e a média aritmética é {resultado/(i+1)}'
+
+    def mediaAlunos(self,vetor):
+        resultado = 0
+        n = 0
+        for i in range(len(vetor)):
+            resultado += vetor[i]
+
+        media = (resultado / 20)
+        for i in range(len(vetor)):
+
+            if vetor[i] > media:
+                    n+=1
+
+        return f' \n A média da turma é {media} e o total de alunos maior do que a média {n}'
+
+    def prefeitura(self, salario, filho):
+        resultado = 0
+        resul = 0
+        per = 0
+        for i in range(len(salario)):
+            resultado += salario[i]
+            if salario[i] < 150:
+                per += 1
+        for i in range(len(filho)):
+            resul += filho[i]
+
+        return f'\n A média de salário é {resultado/(i+1)}\n A média de filhos é {resul/(i+1)}\n O maior salário informado é de {max(salario)}\n O percentual menor do que R$150,00 é {(per/(i+1))*100}% '
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

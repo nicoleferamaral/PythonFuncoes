@@ -35,6 +35,29 @@ class Menu:
               + '\n23. Somar todos'
               + '\n24. Sequencia de Collatz'
               + '\n25. Número perfeito'
+              + '\n\n\n ------ 2ª Lista ------ \n\n'
+              + '\n26. Troca'
+              + '\n27. Antecessor'
+              + '\n28. Àrea do Retangulo'
+              + '\n29. Anos em Dias'
+              + '\n30. Votos'
+              + '\n31. Reajuste de salário'
+              + '\n32. Preço total do carro'
+              + '\n33. Média do aluno'
+              + '\n34. Preço das maçãs'
+              + '\n35. Ordem crescente'
+              + '\n36. Salário após comissão'
+              + '\n37. Saldo atual'
+              + '\n38. Tabuada do 1 ao 10'
+              + '\n39. Imprimir valores'
+              + '\n40. Números negativos'
+              + '\n41. Somar menores que 40'
+              + '\n42. Média do 15 ao 100'
+              + '\n43. Quantidade'
+              + '\n44. Média da turma'
+              + '\n45. Prefeitura'
+
+
 
               )
 
@@ -162,8 +185,124 @@ class Menu:
                 num1 = int(input('Informe um número: '))
                 print(f' \n{self.opera.perfeito(num1)}')
 
+            elif self.opcao == 26:
+                print(f' \n{self.opera.troca()}')
+
+            elif self.opcao == 27:
+                num1 = int(input('Informe um número: '))
+                print(f' \n{self.opera.antecessor(num1)}')
+
+
+            elif self.opcao == 28:
+                num1 = int(input('Informe a base: '))
+                num2 = int(input('Informe a altura: '))
+                print(f'\nA área do retangulo é:  {self.opera.areaRe(num1,num2)}')
+
+            elif self.opcao == 29:
+                num1 = int(input('Informe o ano Atual: '))
+                num2 = int(input('Informe o ano de nascimento: '))
+                num3 = int(input('Informe o mês: '))
+                num4 = int(input('Informe o dia: '))
+                print(f'\nA idade em dias é:  {self.opera.anosDia(num1, num2,num3,num4)}')
+
+            elif self.opcao == 30:
+                num1 = int(input('Informe o total de votos: '))
+                num2 = int(input('Informe os votos brancos: '))
+                num3 = int(input('Informe os votos nulos: '))
+                num4 = int(input('Informe os votos validos: '))
+                print(f' \n{self.opera.votos(num1, num2,num3,num4)}')
+
+            elif self.opcao == 31:
+                num1 = int(input('Informe o salário atual: '))
+                num2 = int(input('Informe o percentual de ajuste: '))
+                print(f'\nO novo salário é:  {self.opera.salario(num1, num2)}')
+
+            elif self.opcao == 32:
+                num1 = int(input('Informe o custo de fábrica do carro: '))
+                print(f'\nO valor total do carro é:  {self.opera.carro(num1)}')
+
+            elif self.opcao == 33:
+                num1 = int(input('Informe a primeira nota: '))
+                num2 = int(input('Informe a segunda nota: '))
+                num3 = int(input('Informe a terceira nota: '))
+                print(f'\n A média desse aluno é: {self.opera.media(num1, num2, num3)}')
+
+            elif self.opcao == 34:
+                num1 = int(input('Informe a quantidade de maçãs: '))
+                print(f'\nO valor total é:  {self.opera.maca(num1)}')
+
+            elif self.opcao == 35:
+                vetor = []
+                for i in range(1,11,1):
+                    vetor.append(input(f'Informe o {i}º valor: '))
+                print(f'\nA ordem crescente dos valores é:  {self.opera.crescente(vetor)}')
+
+            elif self.opcao == 36:
+                num1 = int(input('Informe o salário fixo: '))
+                num2 = int(input('Informe o valor das vendas: '))
+                print(f'\nO salário total é:  {self.opera.vendas(num1,num2)}')
+
+            elif self.opcao == 37:
+                num1 = int(input('Informe o saldo: '))
+                num2 = int(input('Informe o débito: '))
+                num3 = int(input('Informe o crédito: '))
+                print(f'\nSobre o saldo atual do cliente da conta 12345: \n  {self.opera.saldo(num1,num2,num3)}')
+
+            elif self.opcao == 38:
+                num = int(input('Informe um número de 1 a 10: '))
+                print(f'\nA tabuada é:  {self.opera.tabua(num)}')
+
+            elif self.opcao == 39:
+                num = int(input('Informe um número inteiro: '))
+                print(f'\n {self.opera.imprima(num)}')
+
+            elif self.opcao == 40:
+                vetor = []
+                for i in range(1, 11, 1):
+                    vetor.append(int(input(f'Informe o {i}º valor: ')))
+                print(f'\nTem   {self.opera.negativos(vetor)} valores negativos')
+
+            elif self.opcao == 41:
+                vetor = []
+                for i in range(1, 11, 1):
+                    vetor.append(int(input(f'Informe o {i}º valor: ')))
+                print(f'\nA soma de todos os números abaixo de quarenta é:  {self.opera.somaQuarenta(vetor)}')
+
+            elif self.opcao == 42:
+                print(f'\nA média aritmética do 15 ao 100 é:  {self.opera.mediaArit()}')
+
+            elif self.opcao == 43:
+                num = int(input('Informe uma quantidade: '))
+                vetor = []
+                for i in range(0, num, 1):
+                    vetor.append(int(input(f'Informe o {i+1}º valor: ')))
+                print(f'\n {self.opera.quantidade(vetor)}')
+
+            elif self.opcao == 44:
+                vetor = []
+                for i in range(0, 20, 1):
+                    vetor.append(int(input(f'Informe o {i + 1}º valor: ')))
+                print(f'\n {self.opera.mediaAlunos(vetor)}')
+
+            elif self.opcao == 45:
+                num = int(input('Informe o total de pessoas: '))
+                salario = []
+                filho = []
+                for i in range(0, num, 1):
+                    salario.append(int(input(f'Informe o {i + 1}º salário: ')))
+                for i in range(0, num, 1):
+                    filho.append(int(input(f'Informe a {i + 1}º quantidade de filhos: ')))
+                print(f'\n {self.opera.prefeitura(salario,filho)}')
+
+
+
+
+
+
             else:
                 return "Número inválido"
+
+
 
 
 
